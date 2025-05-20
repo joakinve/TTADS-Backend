@@ -11,7 +11,7 @@ const router = require('./routes/index.routes');
 
 // Settings
 app.use(cors());
-app.use(express.json());
+app.use(express.json({ extended: true }));
 //app.use(express.urlencoded({ extend: false }));
 //app.use(bodyParser.urlencoded({ extended: true }));
 //app.use(json());

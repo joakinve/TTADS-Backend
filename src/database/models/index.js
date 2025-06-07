@@ -8,7 +8,16 @@ const config = require('../../config/config');
 const db = {};
 
 // Crear conexión
-let sequelize = new Sequelize(config.database, config.username, config.password, config);
+let sequelize;
+
+// Valida si está definida la propiedad use_env_variable (sólo está en el entorno de producción)
+if (config.use_env_variable) {
+    // Crea la conexión en producción
+    sequelize = new Sequelize(process.env[config.use_env_variable], config);
+} else {
+    // Crea la conexión en development
+    sequelize = new Sequelize(config.database, config.username, config.password, config);
+}
 
 // Asociaciones y vinculaciones
 fs.readdirSync(__dirname)

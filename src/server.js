@@ -11,9 +11,12 @@ const router = require('./routes/index.routes');
 
 // Settings
 app.use(cors());
-app.use(express.json());
-app.use(express.urlencoded({ extend: false }));
-app.use(json());
+app.use(express.json({ extended: true }));
+//app.use(express.urlencoded({ extend: false }));
+//app.use(bodyParser.urlencoded({ extended: true }));
+//app.use(json());
+app.use(express.json()); // ✅ parser de JSON nativo
+app.use(express.urlencoded({ extended: true })); // ✅ parser URL-encoded nativo
 
 // Rutas
 // Servir archivos estáticos desde el directorio de imágenes

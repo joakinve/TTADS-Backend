@@ -15,8 +15,6 @@ const timezone = process.env.DB_TIMEZONE || '-03:00';
 // Configs Seeds
 const seederStorage = "sequelize";
 const seederStorageTableName = "seeds";
-
-// Configs Migrations
 const migrationStorage = "sequelize";
 const migrationStorageTableName = "migrations";
 
@@ -32,5 +30,5 @@ module.exports = {
     seederStorage,
     seederStorageTableName,
     migrationStorage,
-    migrationStorageTableName,
+    migrationStorageTableName
 }

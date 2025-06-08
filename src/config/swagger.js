@@ -40,9 +40,7 @@ const options = {
       },
     ],
   },
-  // Rutas a tus archivos de rutas y modelos donde documentarás los endpoints con JSDoc.
-  // Es crucial que estas rutas sean correctas respecto a la ubicación de este archivo 'swagger.js'.
-  // path.join(__dirname, '..', 'routes', '**/*.js') buscará en todas las subcarpetas de routes.
+
   apis: [
     path.join(__dirname, '../routes/**/*.js'), // Busca JSDoc en todos los archivos JS dentro de routes
     path.join(__dirname, '../database/models/*.js') // Busca JSDoc en tus modelos para esquemas

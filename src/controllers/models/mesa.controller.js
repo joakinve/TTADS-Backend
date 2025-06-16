@@ -8,7 +8,7 @@ const habilitarMesa = async (req, res) => {
     if (m) {
       m.update({
         habilitada: true,
-      }).then((c) => {
+      }).then((m) => {
         res.status(201).json({ m, msg: "Mesa habilitada." });
       });
     } else {
@@ -27,7 +27,7 @@ const deshabilitarMesa = async (req, res) => {
     if (m) {
       m.update({
         habilitada: false,
-      }).then((c) => {
+      }).then((m) => {
         res.status(201).json({ m, msg: "Mesa deshabilitada." });
       });
     } else {

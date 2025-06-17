@@ -25,7 +25,7 @@ module.exports = {
     },
     production: {
         use_env_variable: "DATABASE_URL", // Railway va a leer esto
-        dialect: process.env.DB_TYPE,
+        dialect: 'mysql',
         logging: false, // es para que no se muestre cada query por consola
         timezone: process.env.DB_TIMEZONE,
         seederStorage,

@@ -8,7 +8,7 @@ const PORT = process.env.PORT || 3000;
 
 http.listen(PORT, () => {
     console.log(`Running on a port: ${PORT}`);
-    sequelize.sync({ force: false })
+    sequelize.sync({ alter: true })
         .then(() => { 
             console.log('Conexion a DB exitosa'); 
             console.log(`Documentación de la API disponible en http://localhost:${PORT}/api-docs`);

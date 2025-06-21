@@ -107,7 +107,7 @@ const confirmarUsuario =  async (req, res) => {
             u.update({
                 isConfirmado: true
             }).then(u => {
-                return res.redirect(`http://${process.env.FRONT_URL}/auth`);
+                return res.redirect(`${process.env.URL_FRONT}/auth`);
             })
         } else {
             return res.status(404).json({'msg':'No se recibieron los datos.'})

@@ -88,8 +88,8 @@ EMAIL_USERNAME=tu_email # email de la cuenta que envía correos
 EMAIL_PASSWORD=tu_clave # contraseña de la cuenta que envía correos
 
 # URLs
-URL='localhost:3000' # url en el que esta alojado el backend
-URL_FRONT='localhost:4200' # url en el que esta alojado el frontend
+URL_BACK= 'http://localhost:3000' # url completa en el que esta alojado el backend
+URL_FRONT= 'http://localhost:4200' # url completa en el que esta alojado el frontend
 ```
 
 **¡Importante!** Asegúrate de reemplazar los valores con tus propias credenciales y configuraciones.

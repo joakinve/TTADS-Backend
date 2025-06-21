@@ -17,7 +17,7 @@ const envioConfirmacionEmail = async (usuario) => {
         });
 
         var token = jwt.encode(usuario.email, process.env.HASH_KEY) // Crea un token con el email de la cuenta a confirmar
-        const url = `http://${process.env.URL}/usuarios/confirmar/${token}` // Se crea la URL para que el usuario pueda confirmar su cuenta
+        const url = `${process.env.URL_BACK}/usuarios/confirmar/${token}` // Se crea la URL para que el usuario pueda confirmar su cuenta
         console.log(url)
         // Ruta para enviar el correo electrónico
         transporter.sendMail({
